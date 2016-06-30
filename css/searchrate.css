@@ -1,0 +1,57 @@
+       .select2-container .select2-selection--single span.select2-selection__rendered{font-family: 'arial, helvetica, sans-serif';font-size: 13px;}
+        .customStyle { width: 150px; height: 25px; }
+        * { margin: 0; padding: 0; }
+        .nav { background-color: #333; height: 70px; }
+        .nav ul { height: : 70px; }
+        .nav ul li { font-family: 'Expletus Sans', cursive; font-size: 35px; width: 150px; float: left; list-style-type: none; color: white; text-align: center; line-height: 70px; opacity: 0.8; }
+        .subnav { background-color: #336; height: 50px; }
+        .subnav ul { height: : 50px; width: 800px; margin: 0 auto; }
+        .subnav ul li { font-family: serif; font-size: 18px; width: 150px; float: left; list-style-type: none; color: white; text-align: center; line-height: 50px; }
+        .subnav ul li a { display: block; color: white; text-decoration: none; line-height: 50px; }
+        .subnav ul li a:hover { background-color: #0e13ad; }
+        #search_rate a { background-color: #0a0d6b; }
+        .buffer { line-height: : 40px; height: 40px; margin: 0 auto; }
+        .form_register { background-color: #e1e8eb; width: 600px; margin: 0 auto; }
+        td { padding: 5px; }
+        .styled-button-8 {
+            background: #336;
+            //background: #25A6E1;
+            background: -moz-linear-gradient(top, #336 0%, #188BC0 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #336), color-stop(100%, #188BC0));
+            background: -webkit-linear-gradient(top, #336 0%, #188BC0 100%);
+            background: -o-linear-gradient(top, #336 0%, #188BC0 100%);
+            background: -ms-linear-gradient(top, #336 0%, #188BC0 100%);
+            background: linear-gradient(top, #336 0%, #188BC0 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#25A6E1', endColorstr='#188BC0', GradientType=0);
+            padding: 8px 13px;
+            color: #fff;
+            font-family: 'Helvetica Neue', sans-serif;
+            font-size: 13px;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border: 1px solid #1A87B9;
+            text-decoration: none;
+        }
+        h3 { font-family: arial, helvetica, sans-serif; font-size: 23px; }
+        #message { color: red; }
+        label { font-family: arial, helvetica, sans-serif; font-size: 13px; }
+        .input-control { overflow: hidden; height: 25px; }
+        .dropdown { position: relative; }
+        .dropdown dd, .dropdown dt { margin: 0px; padding: 0px; }
+        .dropdown ul { margin: -1px 0 0 0; }
+        .dropdown dd { position: relative; }
+        .dropdown a, .dropdown a:visited { color: rgb(0, 0, 0);text-decoration: none; outline: none; font-size: 13px; font-family: arial, helvetica, sans-serif; }
+        .dropdown dt a { background-color: #FFF; display: block; overflow: hidden; border: 1px solid #999; width: 200px; position: relative; height: 25px; line-height: 25px; }
+        .dropdown dt a .hida{font-family: 'arial, helvetica, sans-serif';font-size: 13px;color: #000;}
+        .dropdown dt a .hida, .dropdown dt a .multiSel { display: block; width: 90%; padding: 0 5%; height: 100%; position: absolute; left: 0; top: 0; }
+        .multiSel { margin: 0; }
+        .dropdown dt a span, .multiSel span { cursor: pointer; display: inline-block; }
+        .dropdown dd ul { background-color: #FFF; border: 1px solid #999; border-top: none; display: none; left: 0px; padding: 2px 15px 2px 5px; position: absolute; top: 1px; width: 180px; list-style:
+        none; overflow: auto; z-index: 999;}
+        .dropdown span.value { display: none; }
+        .dropdown dd ul li { font-size: 11px; font-family: arial, helvetica, sans-serif; line-height: 20px;}
+        .dropdown dd ul li a { padding: 5px; display: block; font-size: 11px; font-family: arial, helvetica, sans-serif; }
+        .dropdown dd ul li.options { overflow: hidden; }
+        .dropdown dd ul li span { cursor:pointing;float: right; font-size: 11px; font-family: arial, helvetica, sans-serif; }
+        .dropdown dd ul li a:hover { background-color: #fff; }
