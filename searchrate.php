@@ -261,13 +261,13 @@
                         }
                     }
                     if(!((origin.state.length && origin.city.length) || (dest.state.length && dest.city.length))){
-                        alert('Please fill in origin or destination.');
+                        $('#message').html('Please fill in origin or destination.');
                         return false;
                     }
                     //console.log(origin,dest);
                     return true;
                 }else{
-                    alert('Please select trailer type.');
+                    $('#message').html('Please select trailer type.');
                     return false;
                 }
             });
