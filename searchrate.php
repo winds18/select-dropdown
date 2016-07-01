@@ -258,7 +258,14 @@
                         }else if(data[i].name == 'dest_radius'){
                             dest.radius = new RegExp('^[0-9]*$').test(data[i].value) ? data[i].value : '';
                             $('#dest_radius').val(dest.radius);
+                        }else if(data[i].name == 'origin_zipcode'){
+                            origin.zipcode = data[i].value;
+                        }else if(data[i].name == 'dest_zipcode'){
+                            dest.zipcode = data[i].value;
                         }
+                    }
+                    if(origin.zipcode.length || dest.zipcode.length){
+                        return true;
                     }
                     if(!((origin.state.length && origin.city.length) || (dest.state.length && dest.city.length))){
                         $('#message').html('Please fill in origin or destination.');
