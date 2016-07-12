@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>FellowTrucker Home</title>
+    <link href='https://fonts.googleapis.com/css?family=Expletus+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/first-notloggedin.css"></style>
+    <style>
+        .jia{background: url(images/jia.png) 85% center no-repeat;background-size: 10px 10px;}
+        .jian{background: url(images/jian.png) 85% center no-repeat;background-size: 10px 10px;}
+    </style>
+    <script src="scripts/jquery-1.11.3.min.js"></script>
+    <script>
+        jQuery(function($){
+            $('td').each(function(){
+                var regStr = $(this).html();
+                if(regStr.indexOf('Comments') > -1){
+                    var ori = $(this);
+                    var that = $(this).parent('tr').prev().children('td:eq(1)');
+                    that.addClass('jia').css('cursor','pointer');
+                    ori.css('display','none');
+                    that.on('click',function(e){
+                        if($(this)[0].className === 'jia'){
+                            $(this).removeClass('jia').addClass('jian');
+                            ori.css('display','');
+                        }else{
+                            $(this).removeClass('jian').addClass('jia');
+                            ori.css('display','none');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>&nbsp;FellowTrucker</li>
+        </ul>
+    </div>
+    <div class="subnav">
+        <form action="" method="post" id="login">
+            <div class="navlogin">
+                <label for="password">Email:</label>
+                <input type="text" name="email" id="email" size="15">&nbsp;
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" size="10">
+                <input type="submit" class="styled-button-2" value="Log in">
+            </div>
+        </form>
+    </div>
+    <div class="buffer"> </div>
+    <div class="buffer"> </div>
+    <div class="buffer"> </div>
+    <div class="mission">
+        our <strong>mission</strong>:
+    </div>
+    <div class="headline">
+        <ul>
+            <li>Connect</li>
+            <li>Share</li>
+            <li>Empower</li>
+        </ul>
+    </div>
+    <div class="subheadline">
+        <p>Help fellow truckers, join fellowtrucker.com.</p>
+        <p>Share your rates, make fair rate for erveryone.</p>
+    </div>
+    <div class="buffer"> </div>
+    <div class="buffer"> </div>
+    <div class="buffer"> </div>
+    <div class="signin">
+        <p><a href="/register" class="styled-button-8">JOIN</a></p>
+    </div>
+    <div class="buffer"></div>
+    <div class="buffer"></div>
+    <div class="buffer">
+    </div>
+    <div class="rates">
+        <table width="1000" cellspacing="0">
+            <tr BGCOLOR="#333" class="title">
+                <td align="center"><strong>Age</strong></td>
+                <td align="center"><strong>Book Date</strong></td>
+                <td align="center"><strong>Rate</strong></td>
+                <td align="center"><strong>P/U Date</strong></td>
+                <td align="center"><strong>Del Date</strong></td>
+                <td align="center"><strong>Origin</strong></td>
+                <td align="center"><strong>Destination</strong></td>
+                <td align="center"><strong>Trailer</strong></td>
+                <td align="center"><strong>picks/drops</strong></td>
+                <td align="center"><strong>Weight</strong></td>
+                <td align="center"><strong>F/P</strong></td>
+                <td align="center" <strong>Company</strong></td>
+            </tr>
+            <tr class="data">
+                <td align="center">00d:07h:33min</td>
+                <td align="center">07/11</td>
+                <td align="center">$2600.00</td>
+                <td align="center">07/11</td>
+                <td align="center">07/14</td>
+                <td align="center">Albany,GA</td>
+                <td align="center">Camp Pendleton,CA</td>
+                <td align="center">V</td>
+                <td align="center">1p/1d</td>
+                <td align="center">26&nbsp;klbs</td>
+                <td align="center">F</td>
+                <td align="center">omw truck inc / carrier</td>
+            </tr>
+            <tr class="data" BGCOLOR="#e1e8eb">
+                <td align="center">00d:07h:35min</td>
+                <td align="center">07/11</td>
+                <td align="center">$1000.00</td>
+                <td align="center">07/11</td>
+                <td align="center">07/12</td>
+                <td align="center">Panorama City,CA</td>
+                <td align="center">Las Vegas,NV</td>
+                <td align="center">V</td>
+                <td align="center">1p/1d</td>
+                <td align="center">14&nbsp;klbs</td>
+                <td align="center">F</td>
+                <td align="center">omw truck inc / carrier</td>
+            </tr>
+            <tr class="data">
+                <td align="center">00d:07h:40min</td>
+                <td align="center">07/11</td>
+                <td align="center">$3000.00</td>
+                <td align="center">07/11</td>
+                <td align="center">07/13</td>
+                <td align="center">Oxnard,CA</td>
+                <td align="center">Denver,CO</td>
+                <td align="center">R</td>
+                <td align="center">1p/1d</td>
+                <td align="center">25&nbsp;klbs</td>
+                <td align="center">F</td>
+                <td align="center">omw truck inc / carrier</td>
+            </tr>
+            <tr class="data">
+                <td colspan=12 align=center>Comments:produce</td>
+            </tr>
+            <tr class="data" BGCOLOR="#e1e8eb">
+                <td align="center">00d:07h:41min</td>
+                <td align="center">07/11</td>
+                <td align="center">$3200.00</td>
+                <td align="center">07/14</td>
+                <td align="center">07/18</td>
+                <td align="center">Logan,UT</td>
+                <td align="center">Atlanta,GA</td>
+                <td align="center">R</td>
+                <td align="center">1p/1d</td>
+                <td align="center">42&nbsp;klbs</td>
+                <td align="center">F</td>
+                <td align="center">omw truck inc / carrier</td>
+            </tr>
+            <tr class="data">
+                <td align="center">00d:07h:56min</td>
+                <td align="center">07/11</td>
+                <td align="center">$4000.00</td>
+                <td align="center">07/11</td>
+                <td align="center">07/14</td>
+                <td align="center">Ontario,CA</td>
+                <td align="center">College Park,GA</td>
+                <td align="center">R</td>
+                <td align="center">1p/1d</td>
+                <td align="center">22&nbsp;klbs</td>
+                <td align="center">F</td>
+                <td align="center">sunhen inc / carrier</td>
+            </tr>
+            <tr class="data">
+                <td colspan=12 align=center>Comments:frozen</td>
+            </tr>
+            <tr class="data" BGCOLOR="#e1e8eb">
+                <td align="center">00d:08h:08min</td>
+                <td align="center">07/11</td>
+                <td align="center">$350.00</td>
+                <td align="center">07/12</td>
+                <td align="center">07/12</td>
+                <td align="center">Panorama City,CA</td>
+                <td align="center">Santa Fe Springs,CA</td>
+                <td align="center">R</td>
+                <td align="center">1p/1d</td>
+                <td align="center">12&nbsp;klbs</td>
+                <td align="center">F</td>
+                <td align="center">sunhen inc / carrier</td>
+            </tr>
+            <tr class="data" BGCOLOR="#e1e8eb">
+                <td colspan=12 align=center>Comments:55degree</td>
+            </tr>
+            <tr class="data">
+                <td align="center">00d:08h:10min</td>
+                <td align="center">07/11</td>
+                <td align="center">$1800.00</td>
+                <td align="center">07/12</td>
+                <td align="center">07/15</td>
+                <td align="center">Plymouth,MN</td>
+                <td align="center">Natick,MA</td>
+                <td align="center">V</td>
+                <td align="center">1p/1d</td>
+                <td align="center">5&nbsp;klbs</td>
+                <td align="center">P</td>
+                <td align="center">sunhen inc / carrier</td>
+            </tr>
+            <tr class="data">
+                <td colspan=12 align=center>Comments:18ft</td>
+            </tr>
+            <tr class="data" BGCOLOR="#e1e8eb">
+                <td align="center">00d:09h:03min</td>
+                <td align="center">07/11</td>
+                <td align="center">$1300.00</td>
+                <td align="center">07/12</td>
+                <td align="center">07/13</td>
+                <td align="center">Ontario,CA</td>
+                <td align="center">Salt Lake City,UT</td>
+                <td align="center">R</td>
+                <td align="center">1p/1d</td>
+                <td align="center">40&nbsp;klbs</td>
+                <td align="center">F</td>
+                <td align="center">sunhen,inc / carrier</td>
+            </tr>
+            <tr class="data">
+                <td align="center">00d:09h:28min</td>
+                <td align="center">07/11</td>
+                <td align="center">$2400.00</td>
+                <td align="center">07/11</td>
+                <td align="center">07/13</td>
+                <td align="center">Carson,CA</td>
+                <td align="center">Jefferson City,MO</td>
+                <td align="center">V</td>
+                <td align="center">1p/1d</td>
+                <td align="center">15&nbsp;klbs</td>
+                <td align="center">F</td>
+                <td align="center">sunhen,inc / carrier</td>
+            </tr>
+            <tr class="data" BGCOLOR="#e1e8eb">
+                <td align="center">03d:04h:49min</td>
+                <td align="center">07/08</td>
+                <td align="center">$2200.00</td>
+                <td align="center">07/11</td>
+                <td align="center">07/13</td>
+                <td align="center">Indianapolis,IN</td>
+                <td align="center">Salt Lake City,UT</td>
+                <td align="center">V</td>
+                <td align="center">1p/1d</td>
+                <td align="center">30&nbsp;klbs</td>
+                <td align="center">F</td>
+                <td align="center">sunhen inc / carrier</td>
+            </tr>
+        </table>
+    </div>
+    <!--
+<div class="footer">
+<span>2016 Copyright Fellowtrucker.com</span>
+</div>
+-->
+</body>
+</html>
