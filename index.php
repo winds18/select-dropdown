@@ -23,7 +23,7 @@
         $dest_city_name = empty($_POST['dest_city_name']) ? 'Please Select' : $_POST['dest_city_name'];
         $dest_zipcode = $_POST['dest_zipcode'];
 
-        echo '<pre>';var_dump($origin_city_id);echo '</pre>';
+        echo '<pre>';var_dump($_POST);echo '</pre>';
         $number_pickups  = $_POST['number_pickups'];
         $number_drops  = $_POST['number_drops'];
         include 'html.postload.php';

@@ -635,11 +635,25 @@ if(!empty($dest_city_id))
                 $( "#origin_state,#origin_city,#dest_state,#dest_city").select2({
                     matcher: oldMatcher(matchStart)
                 });
+                if($("#origin_state").val()){
+                  var obj = $("#origin_city");
+                  obj.load("getCities.php",{"state": $('#origin_state').val()}, function(data){
+                      data = '<option value="<?php echo $origin_city_id;?>"><?php echo $origin_city_name;?></option>' + data;
+                      $(this).html(data).prop('disabled',false).select2({matcher: oldMatcher(matchStart)});
+                  });
+                }
+                if($("#dest_state").val()){
+                  var obj = $('#dest_city');
+                  obj.load("getCities.php",{"state": $('#dest_state').val()}, function(data){
+                      data = '<option value="<?php echo $dest_city_id;?>"><?php echo $dest_city_name;?></option>' + data;
+                      $(this).html(data).prop('disabled',false).select2({matcher: oldMatcher(matchStart)});
+                  });
+                }
                 $("#origin_state,#dest_state").on("select2:close", function(e){
                     var id = $(this).attr('id').replace('state', 'city');
                     var obj = $("#" + id);
                     obj.load("getCities.php",{"state": $(this).val()}, function(data){
-                        data = '<option val="">Please Select</option>' + data;
+                        data = '<option value="">Please Select</option>' + data;
                         $(this).html(data).prop('disabled',false).select2({matcher: oldMatcher(matchStart)});
                     });
                 });
@@ -649,7 +663,7 @@ if(!empty($dest_city_id))
                     id = 'input[name="' + $(this).attr('id') + '"]';
                     //console.log($(this).find("option:selected").val());
                     //$(id).val($(this).find("option:selected").val());
-                    console.log(id);
+                    //console.log(id);
                     $(id).remove();
                 });
             });
